@@ -1,40 +1,27 @@
 package es3;
 
 import entities.Articles;
+import entities.Cart;
 import entities.Client;
 
-import java.util.Scanner;
-
 public class Main3 {
-
     public static void main(String[] args) {
+        // Esempio di utilizzo delle classi
 
-        Scanner userInput = new Scanner(System.in);
+        // Creazione di un articolo
+        Articles prodotto1 = new Articles("Prodotto 1", 22, 19);
 
+        // Creazione di un cliente
+        Client cliente1 = new Client(1, "Mario", "Rossi", "mario@email.com");
 
-        System.out.println("Enter your user code");
-        int userCode = Integer.parseInt(userInput.nextLine());
-        System.out.println("Enter your name");
-        String name = userInput.nextLine();
-        System.out.println("Enter your surname");
-        String surname = userInput.nextLine();
-        System.out.println("Enter your email");
-        String email = userInput.nextLine();
+        // Creazione di un carrello associato al cliente
+        Cart carrelloCliente1 = new Cart(cliente1);
 
-        Client admin = new Client(userCode, name, surname, email);
-        admin.getUserData();
+        // Aggiunta di un articolo al carrello
+        carrelloCliente1.aggiungiArticolo(prodotto1);
 
-
-        System.out.println("Enter the description about the Article");
-        String description = userInput.nextLine();
-        System.out.println("Enter the price");
-        double price = Double.parseDouble(userInput.nextLine());
-        System.out.println("How many items are left?");
-        int itemsleft = Integer.parseInt(userInput.nextLine());
-
-        Articles toy = new Articles(description, price, itemsleft);
-        toy.getArticlesData();
-
-
+        // Calcolo del totale nel carrello
+        double totaleCarrello = carrelloCliente1.calcolaTotale();
+        System.out.println("Totale nel carrello del cliente 1: " + totaleCarrello);
     }
 }

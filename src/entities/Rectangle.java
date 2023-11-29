@@ -2,12 +2,12 @@ package entities;
 
 public class Rectangle {
 
-    public static int base;
-    public static int side;
+    public int base;
+    public int side;
 
-    public static int area;
+    public int area;
 
-    public static int perim;
+    public int perim;
 
 
     //constructors
@@ -24,7 +24,6 @@ public class Rectangle {
     public void calcPerim() {
         this.perim = ((this.base * 2) + (this.side * 2));
         System.out.println("Perimetro:" + this.perim);
-        ;
     }
 
     public void calcArea() {

@@ -21,11 +21,43 @@ public class Client {
     }
 
 
-    public void getUserData() {
-        System.out.println("Code: " + userCode);
-        System.out.println("Name: " + name);
-        System.out.println("Surname: " + surname);
-        System.out.println("Email: " + email);
-        System.out.println("Date of subscrption: " + date);
+    public int getCodiceCliente() {
+        return userCode;
+    }
+
+    public void setCodiceCliente(int codiceCliente) {
+        this.userCode = codiceCliente;
+    }
+
+    public String getNome() {
+        return name;
+    }
+
+    public void setNome(String nome) {
+        this.name = nome;
+    }
+
+    public String getCognome() {
+        return surname;
+    }
+
+    public void setCognome(String cognome) {
+        this.surname = cognome;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public Date getDataIscrizione() {
+        return date;
+    }
+
+    public void setDataIscrizione(Date dataIscrizione) {
+        this.date = dataIscrizione;
     }
 }

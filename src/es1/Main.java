@@ -7,7 +7,7 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
 
-//        perimetro
+//        1
         System.out.println("Inserisci i dati del primo rettangolo");
         Scanner userInput = new Scanner(System.in);
         System.out.println("Inserisci base del rettangolo");
@@ -20,7 +20,7 @@ public class Main {
         rect1.calcArea();
 
 
-//        area
+//        2
 
         System.out.println("Inserisci i dati del secondo rettangolo");
         System.out.println("Inserisci base del rettangolo");
